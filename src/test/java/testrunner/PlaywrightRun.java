@@ -4,10 +4,12 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import org.testng.annotations.Test;
 
 public class PlaywrightRun {
 
-    public static void main(String[] args) {
+    @Test
+    public void openBrowser() {
         BrowserType.LaunchOptions options = new BrowserType.LaunchOptions();
         options.setChannel("chrome");
         options.setHeadless(false);
@@ -19,4 +21,6 @@ public class PlaywrightRun {
             browser.close();
         }
     }
+
+
 }
